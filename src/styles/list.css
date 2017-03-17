@@ -1,0 +1,37 @@
+.lists-container {
+  min-width: 400px;
+  align-self: stretch;
+  display: block;
+  flex: 2em 2em 15em;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  margin: 25px;
+}
+
+.action-list {
+  position: relative;
+  min-width: 100px;
+  min-height: 340px;
+  text-align: left;
+  display: inline-block;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.action-list ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.action-list button {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+
+.action-list i {
+  float: right;
+  font-style: normal;
+}
