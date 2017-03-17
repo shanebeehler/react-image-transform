@@ -4,7 +4,7 @@ import List                 from './list';
 import                           '../styles/App.css';
 
 const initialState = { "rotate(40deg)"     : false,
-                       "translateX(-40px)" : false,
+                       "translate(-40px)"  : false,
                        "opacity(.5)"       : false,
                        "scale(.5)"         : false
 };
