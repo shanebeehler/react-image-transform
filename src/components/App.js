@@ -28,7 +28,9 @@ class App extends Component {
   }
 
   render() {
-    var items = ["rotate(40deg)", "translate(-40px)", "opacity(.5)", "scale(.5)"];
+    var items = [];
+    for (var key in initialState) { items.push(key) }
+
     return (
       <div className="App">
 
