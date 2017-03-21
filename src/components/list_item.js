@@ -2,7 +2,7 @@ import React from 'react';
 
 const ListItem = ({ title, transformations, item, onClick }) => {
 
-  const toggleListVisibility = (title, transformations, item) => {
+  const toggleListItemVisibility = (title, transformations, item) => {
     if (title === "Available Actions") {
       return transformations[item] ? { visibility: "hidden" } : { visibility: "visible" };
     }
@@ -13,7 +13,7 @@ const ListItem = ({ title, transformations, item, onClick }) => {
 
   return (
     <li onClick={ () => onClick(item) }
-        style={ toggleListVisibility( title, transformations, item) }>
+        style={ toggleListItemVisibility(title, transformations, item) }>
         { item.slice(0, item.indexOf("(")) }
         <i>{ transformations[item] ? "-" : "+" }</i>
     </li>
