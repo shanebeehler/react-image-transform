@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ImageDisplay = ({transformations}) => {
+const ImageDisplay = ({ transformations }) => {
   var transform = "";
   var opacity = 1;
 

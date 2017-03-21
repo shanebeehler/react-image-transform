@@ -8,7 +8,7 @@ const ImageContainer = ({ transformations }) => {
   return (
     <div className="image-container" >
       <p>for alignment</p>
-      <ImageDisplay transformations={transformations}/>
+      <ImageDisplay transformations={ transformations }/>
       <ImageInput />
     </div>
   );

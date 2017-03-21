@@ -2,24 +2,28 @@ import React    from 'react';
 import ListItem from './list_item';
 import               '../styles/list.css';
 
-const List = (props) => {
+const List = ({ title, onClick, transformations, reset }) => {
 
-  const renderList = props.items.map((item) =>
+  var items = [];
+  // generate array of transformations
+  for (var key in transformations) { items.push(key) }
+
+  const renderList = items.map((item) =>
     <ListItem key={item}
               item={item}
-              onClick={ () => props.onClick(item) }
-              title={ props.title }
-              state={ props.state }/>
+              onClick={ () => onClick(item) }
+              title={ title }
+              transformations={ transformations }/>
   );
 
   return (
     <div className="action-list" >
-      <p>{props.title}</p>
+      <p>{ title }</p>
       <ul>
-        {renderList}
+        { renderList }
       </ul>
-      { props.title === "Applied Actions" ?
-        <button onClick={ () => props.reset() }>Reset</button> :
+      { title === "Applied Actions" ?
+        <button onClick={ () => reset() }>Reset</button> :
         null
       }
     </div>

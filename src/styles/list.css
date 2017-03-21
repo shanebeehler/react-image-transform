@@ -1,5 +1,5 @@
 .lists-container {
-  min-width: 400px;
+  min-width: 300px;
   align-self: stretch;
   display: block;
   flex: 2em 2em 15em;
@@ -10,7 +10,7 @@
 
 .action-list {
   position: relative;
-  min-width: 100px;
+  min-width: 80px;
   min-height: 340px;
   text-align: left;
   display: inline-block;

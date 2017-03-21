@@ -28,9 +28,6 @@ class App extends Component {
   }
 
   render() {
-    var items = [];
-    for (var key in initialState) { items.push(key) }
-
     return (
       <div className="App">
 
@@ -38,14 +35,12 @@ class App extends Component {
 
         <div className="lists-container">
           <List title="Available Actions"
-                items={items}
                 onClick={ (item) => { this.transformImage(item, true) } }
-                state={ this.state }/>
+                transformations={ this.state }/>
 
           <List title="Applied Actions"
-                items={items}
                 onClick={ (item) => { this.transformImage(item, false) } }
-                state={ this.state }
+                transformations={ this.state }
                 reset={ this.reset.bind(this) }/>
         </div>
 
